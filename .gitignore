@@ -57,4 +57,5 @@ buck-out/
 
 # Local
 local/
+logo/
 AVD_Start.bat
