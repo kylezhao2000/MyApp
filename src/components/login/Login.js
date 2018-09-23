@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {View, Text, TextInput, Button, TouchableHighlight, StyleSheet} from 'react-native';
+import {View, Text, TextInput, TouchableHighlight, StyleSheet} from 'react-native';
+import { StackActions, NavigationActions } from 'react-navigation';
 
 
 export default class Login extends Component{
@@ -8,8 +9,9 @@ export default class Login extends Component{
     this.state = {};
   }
 
-  _loginOnPress(){
-
+  _loginOnPress = ()=>{
+    // this.props.navigation.navigate('Route');
+    this.props.navigation.dispatch(resetAction);
   }
 
   render(){
@@ -37,6 +39,12 @@ export default class Login extends Component{
     );
   }
 }
+
+//reset navigation stack
+const resetAction = StackActions.reset({
+  index: 0,
+  actions: [NavigationActions.navigate({ routeName: 'Route' })],
+});
 
 const styles = StyleSheet.create({
   container: {

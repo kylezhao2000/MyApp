@@ -1,39 +1,28 @@
 
+import React, {Component} from 'react';
+import { createStackNavigator } from 'react-navigation';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
-import React, { Component } from 'react';
-import { AppRegistry, SectionList, StyleSheet, Text, View } from 'react-native';
 import Login from './src/components/login/Login';
+import Route from './src/Route';
 
-export default class SectionListBasics extends Component {
 
-  render() {
-    return (
-      <Login />
+const Nav = createStackNavigator(
+  {
+    Login: {screen: Login},
+    Route: {screen: Route},
+  },
+  {
+    initialRouteName:'Login',
+    navigationOptions: {
+      header: null,
+    }
+  }
+);
+
+export default class App extends Component{
+  render(){
+    return(
+      <Nav />
     );
   }
 }
