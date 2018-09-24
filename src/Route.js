@@ -1,16 +1,16 @@
 
 import React, {Component} from 'react';
-import {Image, StyleSheet} from 'react-native';
+import {Image, StyleSheet, StatusBar} from 'react-native';
 import { createBottomTabNavigator } from 'react-navigation';
 
 // import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
-import Home from './components/Home';
-import Member from './components/Member';
-import Gift from './components/Gift';
+import Home from './components/home/Home';
+import Member from './components/member/Member';
+import Gift from './components/gift/Gift';
 import Manage from './components/Manage';
 
-import Colors from './gears/Colors';
+import Color from './gears/Color';
 
 const Nav = createBottomTabNavigator(
   {
@@ -46,23 +46,10 @@ const Nav = createBottomTabNavigator(
   {
     initialRouteName:'Home',
     tabBarOptions:{
-      style: {backgroundColor: Colors.lightGray},
+      style: {backgroundColor: Color.bottomTabBack},
     },
   }
 );
-
-export default class Route extends Component{
-
-  static navigationOptions = {
-    backRouteIndex: 0,
-  }
-
-  render(){
-    return(
-      <Nav />
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   icon: {
@@ -70,3 +57,11 @@ const styles = StyleSheet.create({
     height: 20,
   },
 });
+
+export default class Route extends Component{
+  render(){
+    return(
+      <Nav />
+    );
+  }
+}

@@ -1,7 +1,7 @@
 
 import React, {Component} from 'react';
 import {View, Text, TouchableHighlight, StyleSheet} from 'react-native';
-import Colors from './Colors';
+import Color from './Color';
 
 export default class TitleBar extends Component{
   render(){
@@ -21,18 +21,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 10,
-    backgroundColor: Colors.darkblue,
+    backgroundColor: Color.titleBarBack,
   },
   title: {
-    color: Colors.white,
+    color: Color.white,
     fontSize: 17,
     fontWeight: 'bold',
   },
   button: {
-    backgroundColor: Colors.darkblue,
+    backgroundColor: Color.darkblue,
   },
   buttonText: {
-    color: Colors.white,
+    color: Color.white,
     fontSize: 17,
     fontWeight: 'bold',
   },

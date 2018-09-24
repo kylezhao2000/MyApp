@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {View, Text, TextInput, TouchableHighlight, StyleSheet} from 'react-native';
 import { StackActions, NavigationActions } from 'react-navigation';
 
+import Color from '../../gears/Color';
+
 
 export default class Login extends Component{
   constructor(props){
@@ -49,7 +51,7 @@ const resetAction = StackActions.reset({
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor: '#F0F0F0'
+    backgroundColor: Color.loginBack,
   },
   button: {
     borderRadius:10,

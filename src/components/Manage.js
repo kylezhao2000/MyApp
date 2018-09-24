@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
 import TitleBar from '../gears/TitleBar';
-import Colors from '../gears/Colors';
+import Color from '../gears/Color';
 
 
 export default class Manage extends Component{
@@ -22,15 +22,15 @@ export default class Manage extends Component{
 const styles = StyleSheet.create({
   container: {
     padding: 1,
-    backgroundColor: Colors.darkblue,
+    backgroundColor: Color.darkblue,
   },
   title: {
-    color: Colors.white,
+    color: Color.white,
   },
   button: {
-    backgroundColor: Colors.darkblue,
+    backgroundColor: Color.darkblue,
   },
   buttonText: {
-    color: Colors.white,
+    color: Color.white,
   },
 });
