@@ -1,6 +1,7 @@
 
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import MapView from 'react-native-maps';
 
 import TitleBar from '../../gears/TitleBar';
 import Color from '../../gears/Color';
@@ -10,9 +11,19 @@ export default class Gift extends Component{
 
   render(){
     return(
-      <View>
-        <TitleBar title="Gift"></TitleBar>
-        <View></View>
+      <View style={styles.container}>
+
+        <MapView
+          style={styles.map}
+          showsUserLocation={true}
+          initialRegion={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+          }}
+        />
+        {/* <TitleBar title="Gift"></TitleBar> */}
       </View>
     );
   }
@@ -21,7 +32,7 @@ export default class Gift extends Component{
 
 const styles = StyleSheet.create({
   container: {
-    padding: 1,
+    flex: 1,
     backgroundColor: Color.darkblue,
   },
   title: {
@@ -32,5 +43,9 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: Color.white,
+  },
+  map: {
+    paddingTop: 50,
+    ...StyleSheet.absoluteFillObject,
   },
 });

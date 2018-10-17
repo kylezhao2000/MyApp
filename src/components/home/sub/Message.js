@@ -8,6 +8,7 @@ export default class Message extends Component{
   render(){
     return(
       <View style={styles.container}>
+        <Text>{realm.objects('Message').length}</Text>
         <FlatList
           style={styles.list}
           data={[

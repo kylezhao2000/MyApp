@@ -1,6 +1,8 @@
 
 import React, {Component} from 'react';
-import { createStackNavigator } from 'react-navigation';
+import {AsyncStorage, Alert, View, Text} from 'react-native';
+import {createStackNavigator} from 'react-navigation';
+import init from 'react_native_mqtt';
 
 // import { library } from '@fortawesome/fontawesome-svg-core'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,13 +11,6 @@ import { createStackNavigator } from 'react-navigation';
 
 import Login from './src/components/login/Login';
 import Route from './src/Route';
-
-
-//temp import for test
-import Message from './src/components/home/sub/Message';
-import Board from './src/components/home/sub/Board';
-import Member from './src/components/member/Member';
-import Gift from './src/components/gift/Gift';
 
 const Nav = createStackNavigator(
   {
@@ -31,6 +26,12 @@ const Nav = createStackNavigator(
 );
 
 export default class App extends Component{
+  constructor(props){
+    super(props);
+
+    this.state = {}
+  }
+
   render(){
     return(
       <Nav />
